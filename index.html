@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>URA TIN Registration Portal</title>
+
+    <link rel="stylesheet" href="portal.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <img src="ura-logo.png" alt="URA Logo">
+
+        <h1>TIN Registration Portal</h1>
+
+    </header>
+
+    <div class="information-bar">
+
+        Have your National ID ready before starting.
+
+    </div>
+
+    <main class="form-container">
+
+        <h2>Taxpayer Registration</h2>
+
+        <p class="intro">
+            Complete the form below to begin your Tax Identification Number registration.
+        </p>
+
+        <div class="taxpayer-options">
+
+            <input type="radio" id="individual" name="taxpayer" value="individual" checked>
+
+            <label for="individual">Individual Taxpayer</label>
+
+            <input type="radio" id="business" name="taxpayer" value="business">
+
+            <label for="business">Business Entity</label>
+
+        </div>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+
+            <fieldset>
+
+                <legend>Section A: Individual Taxpayer Details</legend>
+
+                <div class="form-group">
+
+                    <label for="fullname">Full Name</label>
+
+                    <input type="text" id="fullname" name="fullname"
+                           placeholder="Enter your full name" required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="nin">National Identification Number (NIN)</label>
+
+                    <input type="text" id="nin" name="nin"
+                           pattern="[A-Z]{2}[A-Z0-9]{12}"
+                           maxlength="14"
+                           placeholder="Example: CM123456789012"
+                           title="Enter two capital letters followed by 12 capital letters or digits"
+                           required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="dob">Date of Birth</label>
+
+                    <input type="date" id="dob" name="dob">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Gender</label>
+
+                    <div class="radio-group">
+
+                        <input type="radio" id="male" name="gender" value="Male">
+
+                        <label for="male">Male</label>
+
+
+                        <input type="radio" id="female" name="gender" value="Female">
+
+                        <label for="female">Female</label>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="district">District</label>
+
+                    <select id="district" name="district">
+
+                        <option value="">Select your district</option>
+
+                        <option value="Kampala">Kampala</option>
+
+                        <option value="Wakiso">Wakiso</option>
+
+                        <option value="Mukono">Mukono</option>
+
+                        <option value="Jinja">Jinja</option>
+
+                        <option value="Mbarara">Mbarara</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="phone">Phone Number</label>
+
+                    <input type="tel" id="phone" name="phone"
+                           placeholder="Enter your phone number"
+                           required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="email">Email Address</label>
+
+                    <input type="email" id="email" name="email"
+                           placeholder="example@email.com">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="nationalid">Upload National ID</label>
+
+                    <input type="file" id="nationalid" name="nationalid"
+                           accept=".jpg,.pdf">
+
+                </div>
+
+                <div class="button-container">
+
+                    <button type="submit">Next</button>
+
+                </div>
+
+            </fieldset>
+
+        </form>
+
+    </main>
+
+    <footer>
+
+        <p>&copy; 2026 Uganda Revenue Authority. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>
